@@ -1,0 +1,11 @@
+.style{
+    display: none;
+}
+.display100{
+    display: none;
+    background-color: antiquewhite;
+    color: black;
+    text-align: center;
+    height: 50px;
+    font-size: 27;
+}

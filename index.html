@@ -1,0 +1,91 @@
+<html>
+
+
+<head>
+
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+
+
+    <div class="container py-5">
+
+        <div class="mb-3">
+            <label for="productName">Product Name</label>
+            <input type="text" class="form-control" id="productName" onblur="validProductName()">
+            <div class="display100" id="validName"><p>please start the product name with capital letter</p></div>
+        </div>
+        <div class="mb-3">
+            <label for="productPrice">Product Price</label>
+            <input type="number" class="form-control" id="productPrice" onblur="validProductPrice()">
+            <div class=" display100 " id="validPrice"><p>you must enter price from 2 digit to 5 digit</p></div>
+        </div>
+        <div class="mb-3">
+            <label for="productCategory">Product Category</label>
+
+
+            <select class="form-select" id="productCategory">
+
+                <option value="tv">tv</option>
+                <option value="mobile">mobile</option>
+                <option value="labtop">labtop</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label for="productDescription">Product Description</label>
+
+            <textarea class="form-control" id="productDescription"></textarea>
+
+        </div>
+
+
+        <button onclick="addProduct()" class="btn btn-outline-info" id="addbtn">Add Product</button>
+        
+        <button  onclick="editProduct()" class="btn btn-outline-info style" id="editbtn">Add Edit</button>
+        <button onclick="clearProduct()" class="btn btn-outline-danger ">clear form</button>
+
+    </div>
+
+
+    <div class="container">
+        <input type="text" id="searchInput" placeholder="search......" onkeyup="search()" class="form-control w-50 mx-auto my-3">
+
+        <table class="table  table-striped">
+
+            <thead>
+                <th>#</th>
+                <th>productName</th>
+                <th>productPrice</th>
+                <th>productCategory</th>
+                <th>productDescription</th>
+                <th>update</th>
+                <th>delete</th>
+            </thead>
+            <tbody id="tableData">
+
+                <tr>
+                    <td>0</td>
+                    <td>nokia</td>
+                    <td>2000</td>
+                    <td>mobile</td>
+                    <td>Lorem ipsum dolor sit amet.</td>
+
+                    <td>
+                        <button onclick="updateForm()" class="btn btn-outline-warning">update</button>
+                    </td>
+                    <td>
+                        <button onclick="deleteProduct()" class="btn btn-outline-danger">delete</button>
+                    </td>
+                </tr>
+               
+            </tbody>
+        </table>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
